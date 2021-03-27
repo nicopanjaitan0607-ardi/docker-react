@@ -1,5 +1,4 @@
 sudo: required
-language: node_js
 services:
   - docker
 
@@ -8,4 +7,4 @@ before_install:
 
 
 script:
-  - docker run nicopanjaitan0607-ardi/docker-react npm run test -- --coverage
+  - docker run -e CI=true nicopanjaitan0607-ardi/docker-react npm run test
